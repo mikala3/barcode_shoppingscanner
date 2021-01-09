@@ -1,5 +1,5 @@
-# barcode_shoppingscanner
-barcode/shoppingscanner with a grocerylist an Android application.
+# barcode_shoppingscanner an Android application
+barcode/shoppingscanner with a grocerylist.
 
 Using the zxing barcodescanner and sqlite database. Scan barcodes and add those groceries to the grocerylist with a price, amount and name of the store.
 

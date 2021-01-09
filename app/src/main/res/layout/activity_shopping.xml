@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffafa"
+    tools:context=".ShoppingListActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bottom_panel"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:text="Grocery List"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/heading"
+                    android:fontFamily="@font/adamina"
+                    android:text="0/0 groceries"
+                    android:textAllCaps="true"
+                    android:textSize="10sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/adamina"
+                    android:text="Total price: 0 kr"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic" />
+
+
+            </RelativeLayout>
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Enter product name"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:layout_margin="40dp"
+                android:background="@drawable/rounded_corners"
+                android:maxLines="1"
+                android:inputType="text"
+                android:ems="10"
+                android:text="" />
+            <LinearLayout
+                android:id="@+id/layout_groceryList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="150dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        app:backgroundTint="#973E576A"/>
+    <Button
+        android:id="@+id/buyButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:backgroundTint="#973E576A"
+        android:text="BUY" />
+    </LinearLayout>
+</RelativeLayout>

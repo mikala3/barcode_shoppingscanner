@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/adamina"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:text="Update information"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/adamina"
+            android:layout_marginTop="101dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="temp temp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold" />
+        <EditText
+            android:id = "@+id/price"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:hint="Price"
+            android:maxLength="7"/>
+        <EditText
+            android:id = "@+id/store"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:hint="Name of the store"
+            android:maxLength="16"/>
+        <EditText
+            android:id = "@+id/description"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:hint="Other information"
+            android:maxLength="150"/>
+
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dp"
+            android:text="Post" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

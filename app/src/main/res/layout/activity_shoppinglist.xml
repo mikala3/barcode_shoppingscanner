@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffafa"
+    tools:context=".ShoppingListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/bottom_panel"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="Grocery List"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heading"
+                android:fontFamily="@font/adamina"
+                android:text="0/0 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/adamina"
+                android:text="Total price: 150 kr"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+
+        </RelativeLayout>
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Enter product name"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:layout_margin="40dp"
+            android:background="@drawable/rounded_corners"
+            android:maxLines="1"
+            android:inputType="text"
+            android:ems="10"
+            android:text="" />
+    <LinearLayout
+        android:id="@+id/layout_groceryList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border_bottom"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/grocery1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="snus"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_info_24"
+                android:fontFamily="@font/adamina"
+                android:layout_toRightOf="@+id/grocery1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                android:fontFamily="@font/adamina"
+                android:layout_toRightOf="@+id/info"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_24"
+                android:fontFamily="@font/adamina"
+                android:layout_toRightOf="@+id/add"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="75 kr"
+                android:layout_toLeftOf="@+id/edit"
+                android:layout_marginRight="40dp"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:fontFamily="@font/adamina"
+                android:layout_toLeftOf="@+id/delete"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:fontFamily="@font/adamina"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout3"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_bottom"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/grocery2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="snus"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/info2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_info_24"
+                android:fontFamily="@font/adamina"
+                android:layout_toRightOf="@+id/grocery2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/add2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                android:fontFamily="@font/adamina"
+                android:layout_toRightOf="@+id/info2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/minus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_24"
+                android:fontFamily="@font/adamina"
+                android:layout_toRightOf="@+id/add2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/delete2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:fontFamily="@font/adamina"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="12 groceries"
+                android:textAllCaps="true"
+                android:textSize="10sp"
+                android:textStyle="bold|italic" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
